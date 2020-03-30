@@ -1,0 +1,9 @@
+- hosts: localhost
+
+  tasks:
+    - name: Test hello_world module
+      hello_world:
+        args: "{{ var1 }}"
+      register: result
+
+    - debug: var=result
